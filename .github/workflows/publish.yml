@@ -50,8 +50,8 @@ jobs:
           import os
           from importlib.metadata import distribution
 
-          package = distribution("nexusmods-mcp")
-          assert package.metadata["Name"] == "nexusmods-mcp"
+          package = distribution("glossmod-nexusmods-mcp")
+          assert package.metadata["Name"] == "glossmod-nexusmods-mcp"
           assert package.version == os.environ["RELEASE_VERSION"]
           command, = package.entry_points.select(group="console_scripts", name="nexusmods-mcp")
           assert callable(command.load())
@@ -67,7 +67,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: pypi
-      url: https://pypi.org/project/nexusmods-mcp/
+      url: https://pypi.org/project/glossmod-nexusmods-mcp/
     permissions:
       id-token: write
     steps:

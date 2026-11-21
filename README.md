@@ -23,7 +23,15 @@
 
 ### 安装与更新
 
-在 `nexusmods-mcp` 仓库根目录执行：
+从 PyPI 安装或更新：
+
+```sh
+python -m pip install --upgrade glossmod-nexusmods-mcp
+```
+
+安装后运行 `nexusmods-mcp`，或用 `uvx --from glossmod-nexusmods-mcp nexusmods-mcp` 直接启动。
+
+从源码运行时，在 `nexusmods-mcp` 仓库根目录执行：
 
 ```sh
 uv sync --python 3.11
@@ -92,8 +100,8 @@ uv run --env-file .env python -m unittest discover -s tests -p test_live.py -v
 
 ## 构建与发布到 PyPI
 
-首次发布前，在 PyPI 为 `nexusmods-mcp` 登记 GitHub Trusted Publisher。仓库所有者填 `GlossMod`，仓库名填 `nexusmods-mcp`，工作流文件填 `publish.yml`，环境填 `pypi`。新项目可在 [PyPI Publishing](https://pypi.org/manage/account/publishing/) 预先登记。
+首次发布前，在 PyPI 为 `glossmod-nexusmods-mcp` 登记 GitHub Trusted Publisher。仓库所有者填 `GlossMod`，仓库名填 `nexusmods-mcp`，工作流文件填 `publish.yml`，环境填 `pypi`。新项目可在 [PyPI Publishing](https://pypi.org/manage/account/publishing/) 预先登记。
 
-在 `GlossMod/nexusmods-mcp` 的 GitHub Releases 页面为目标提交选择新标签，点击 **Publish release**。例如，`v0.2.0` 会发布 `nexusmods-mcp==0.2.0`，`v0.2.0rc1` 会发布候选版。GitHub Actions 从标签取版本，构建并校验 wheel 和源码包，然后发布到 PyPI。可在本地运行 `uv build` 检查开发版本的构建产物。
+在 `GlossMod/nexusmods-mcp` 的 GitHub Releases 页面为目标提交选择新标签，点击 **Publish release**。例如，`v0.2.0` 会发布 `glossmod-nexusmods-mcp==0.2.0`，`v0.2.0rc1` 会发布候选版。GitHub Actions 从标签取版本，构建并校验 wheel 和源码包，然后发布到 PyPI。可在本地运行 `uv build` 检查开发版本的构建产物。
 
 参考：[Nexus Mods GraphQL](https://graphql.nexusmods.com/) · [REST v3 接口规范](https://raw.githubusercontent.com/Nexus-Mods/Vortex/master/packages/nexus-api-v3/schema/openapi.yaml)

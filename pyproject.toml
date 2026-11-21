@@ -3,7 +3,7 @@ requires = ["hatchling>=1.25,<2"]
 build-backend = "hatchling.build"
 
 [project]
-name = "nexusmods-mcp"
+name = "glossmod-nexusmods-mcp"
 version = "0.1.0"
 description = "Unofficial local MCP server for Nexus Mods"
 readme = "README.md"
