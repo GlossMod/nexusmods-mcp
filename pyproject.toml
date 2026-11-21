@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling>=1.25,<2"]
+build-backend = "hatchling.build"
+
+[project]
+name = "nexusmods-mcp"
+version = "0.1.0"
+description = "Unofficial local MCP server for Nexus Mods"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["mcp>=1.12,<2", "httpx>=0.27.1,<1", "pydantic>=2.7,<3"]
+
+[project.scripts]
+nexusmods-mcp = "nexusmods_mcp.server:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/nexusmods_mcp"]
